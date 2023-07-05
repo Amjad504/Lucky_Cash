@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/purple_700"
+    android:orientation="vertical">
+
+
+
+
+
+
+    <RelativeLayout
+        android:id="@+id/poi"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="20dp"
+        >
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_centerInParent="true"
+            android:layout_marginEnd="-20dp"
+            android:layout_toStartOf="@+id/lin_points"
+            android:src="@drawable/rupee" />
+
+        <LinearLayout
+            android:id="@+id/lin_points"
+            android:layout_width="wrap_content"
+            android:layout_height="23dp"
+            android:layout_centerInParent="true"
+            android:background="@drawable/coin_back"
+            android:orientation="horizontal"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp">
+
+            <TextView
+                android:id="@+id/tvPoints"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:paddingLeft="7dp"
+                android:text="100"
+                android:textColor="@color/white"
+                android:textSize="11sp" />
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="120dp"
+
+            android:gravity="center">
+
+            <WebView
+                android:id="@+id/web"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                >
+
+            </WebView>
+
+
+
+
+            <ProgressBar
+                android:id="@+id/pb"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:indeterminate="true"
+                />
+
+        </RelativeLayout>
+
+
+        <pl.droidsonroids.gif.GifImageView
+            android:id="@+id/coin_bag"
+            android:layout_width="wrap_content"
+            android:layout_marginEnd="140dp"
+            android:layout_height="200dp"
+            android:clickable="true"
+            android:onClick="CoinBag_Click"
+            android:src="@drawable/coin_bags"
+            android:focusable="true" />
+
+
+
+        <pl.droidsonroids.gif.GifImageView
+            android:id="@+id/coin_collect"
+            android:layout_width="match_parent"
+            android:layout_marginStart="45dp"
+            android:layout_marginTop="-30dp"
+            android:layout_height="150dp"
+            android:rotation="45"
+            android:visibility="gone"
+            android:src="@drawable/coin_collect" />
+
+        <pl.droidsonroids.gif.GifImageView
+            android:id="@+id/progress_anim"
+            android:layout_width="match_parent"
+            android:layout_marginTop="30dp"
+            android:layout_marginStart="-10dp"
+            android:layout_height="100dp"
+            android:src="@drawable/progress2" />
+
+        <ImageView
+            android:id="@+id/dollar_icon"
+            android:layout_width="match_parent"
+            android:layout_marginTop="37dp"
+            android:layout_marginStart="-10dp"
+            android:layout_height="85dp"
+            android:src="@drawable/dollar_icon" />
+
+        <RelativeLayout
+            android:id="@+id/reward_backColor"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/black"
+            android:visibility="gone"
+            android:alpha="0.9"/>
+
+        <RelativeLayout
+            android:id="@+id/reward_layout"
+            android:layout_width="match_parent"
+            android:layout_height="450dp"
+            android:visibility="gone"
+            android:layout_centerInParent="true">
+
+
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/reward_back"
+            android:layout_width="match_parent"
+            android:layout_height="450dp"
+            app:lottie_speed="1.2"
+            app:lottie_repeatCount="-1"
+            android:layout_centerInParent="true"
+            app:lottie_rawRes="@raw/reard_back"
+            app:lottie_autoPlay="true"/>
+
+
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/lucky_reward"
+                android:layout_width="330dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="10dp"
+                app:cardCornerRadius="5dp"
+                android:rotation="-2"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/button_bg"
+                android:backgroundTint="#D500F9">
+
+
+
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="LUCKY REWARD"
+                    android:textSize="30dp"
+                    android:letterSpacing="0.05"
+                    android:layout_gravity="center"
+                    android:layout_margin="10dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/white"/>
+
+
+
+
+            </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardview"
+            android:layout_width="190dp"
+            android:layout_height="130dp"
+            android:layout_centerInParent="true"
+            app:cardCornerRadius="15dp"
+            android:elevation="8dp"
+            android:backgroundTint="#55c1f0">
+
+
+
+            <ImageView
+                android:layout_width="150dp"
+                android:layout_height="100dp"
+                android:src="@drawable/coins_2"
+                android:layout_gravity="center_horizontal"
+                />
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_gravity="bottom"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Paytm"
+                    android:textSize="20dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/white"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="10dp"/>
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="+840"
+                    android:textSize="20dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/white"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="10dp"/>
+
+
+            </RelativeLayout>
+
+
+        </androidx.cardview.widget.CardView>
+
+
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/double_value"
+                android:layout_width="330dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="20dp"
+                app:cardCornerRadius="25dp"
+                android:layout_centerHorizontal="true"
+                android:backgroundTint="#71C3E6">
+
+
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/watch_ad"
+                    android:alpha="0.6"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_alignParentBottom="true"
+
+                    />
+                
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Double"
+                    android:textSize="30dp"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="10dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"/>
+
+
+
+
+            </androidx.cardview.widget.CardView>
+
+
+
+
+
+
+
+
+        </RelativeLayout>
+
+
+
+
+        <!--        <com.airbnb.lottie.LottieAnimationView-->
+<!--            android:id="@+id/card_anim"-->
+<!--            android:layout_width="300dp"-->
+<!--            android:layout_height="300dp"-->
+<!--            android:layout_centerInParent="true"-->
+<!--            app:lottie_rawRes="@raw/card_anim"-->
+<!--            app:lottie_autoPlay="true"/>-->
+
+    </RelativeLayout>
+
+
+
+
+</RelativeLayout>
